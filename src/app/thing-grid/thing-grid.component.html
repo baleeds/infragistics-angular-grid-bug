@@ -1,0 +1,16 @@
+<div class="toolbar">
+  <button type="button" (click)="toggleSidebar()">Toggle sidebar</button>
+</div>
+<div class="app-container">
+  <div class="grid-container" [class.show-sidebar]="showSidebar">
+    <igx-grid [data]="localData">
+      <igx-column header="Employee ID" field="EmployeeID" width="400"></igx-column>
+      <igx-column header="First Name" field="FirstName" width="400"></igx-column>
+      <igx-column header="Last Name" field="LastName" width="400"></igx-column>
+      <igx-column header="Country" field="Country" width="400"></igx-column>
+      <igx-column header="Age" field="Age" width="400" dataType="number"></igx-column>
+      <igx-column header="Registration Date" field="RegistererDate" width="400" [formatter]="dateFormatter"></igx-column>
+      <igx-paginator></igx-paginator>
+    </igx-grid>
+  </div>
+</div>
